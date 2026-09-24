@@ -425,28 +425,50 @@ button {
   color: var(--color-text-muted);
 }
 
-/* Hero Visual: Anatomical Art with Callout Pins (Reference Match) */
+/* Hero Visual: Anatomical Art / Video with Callout Pins (Seamless Background Depth) */
 .hero-visual-wrapper {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-visual-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle at center, rgba(142, 178, 201, 0.25) 0%, rgba(194, 162, 111, 0.08) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-art-card {
   position: relative;
+  width: 100%;
   background: transparent;
-  border-radius: var(--radius-xl);
+  border: none;
+  box-shadow: none;
   padding: 0;
-  border: 1px solid rgba(194, 162, 111, 0.25);
-  box-shadow: 0 30px 80px rgba(14, 21, 36, 0.25);
   overflow: visible;
+  z-index: 1;
 }
 
 .hero-art-image,
 .hero-art-media {
   width: 100%;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-2xl);
   display: block;
   object-fit: cover;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: none;
+  /* Suavização de bordas para integrar como fundo vivo e não parecer um quadrado */
+  mask-image: radial-gradient(ellipse 94% 94% at 50% 50%, black 72%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 94% 94% at 50% 50%, black 72%, transparent 100%);
+  filter: drop-shadow(0 25px 60px rgba(103, 153, 178, 0.35));
 }
 
 /* Callout Pins pointing to anatomical facial structures */
