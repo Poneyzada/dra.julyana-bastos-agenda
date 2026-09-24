@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Julyana Bastos — Redirecionando...</title>
+  
+  <link rel="icon" type="image/webp" href="assets/images/logo-jb-gold.webp">
+
+  <script>
+    (function() {
+      // 1. Check URL parameters for explicit view choice
+      const urlParams = new URLSearchParams(window.location.search);
+      const forceView = urlParams.get('view');
+      
+      if (forceView === 'desktop') {
+        window.location.replace('desktop/index.html');
+        return;
+      }
+      if (forceView === 'mobile') {
+        window.location.replace('mobile/index.html');
+        return;
+      }
+
+      // 2. Intelligent device detection (Mobile First)
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const isSmallScreen = window.innerWidth < 992;
+
+      if (isMobileDevice || isSmallScreen) {
+        window.location.replace('mobile/index.html');
+      } else {
+        window.location.replace('desktop/index.html');
+      }
+    })();
+  </script>
+
+  <!-- Fallback noscript redirect -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=mobile/index.html">
+  </noscript>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #FAF9F6;
+      color: #0E1524;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .loader-box {
+      background: #FFFFFF;
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid #E8E4DB;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      max-width: 440px;
+      width: 100%;
+    }
+    .logo-img {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px;
+      display: block;
+    }
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: #0E1524;
+    }
+    p {
+      font-size: 0.9rem;
+      color: #64748B;
+      margin-bottom: 24px;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .btn-link {
+      display: block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .btn-primary {
+      background: #C2A26F;
+      color: #12161F;
+    }
+    .btn-secondary {
+      background: #0E1524;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-box">
+    <img src="assets/images/logo-jb-gold.webp" alt="Dra. Julyana Bastos" class="logo-img">
+    <h1>Dra. Julyana Bastos</h1>
+    <p>Redirecionando para a melhor versão para o seu dispositivo...</p>
+
+    <div class="btn-group">
+      <a href="mobile/index.html" class="btn-link btn-primary">Acessar Versão Mobile (Celular)</a>
+      <a href="desktop/index.html" class="btn-link btn-secondary">Acessar Versão Desktop (Computador)</a>
+    </div>
+  </div>
+</body>
+</html>

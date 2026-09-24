@@ -1,0 +1,11 @@
+# Ignore raw original unoptimized images at root (we already have all optimized webp in assets/images/)
+*.JPEG
+*.png
+!assets/**
+!mobile/**
+!desktop/**
+!index.html
+
+# OS and temp files
+.DS_Store
+Thumbs.db
