@@ -432,20 +432,21 @@ button {
 
 .hero-art-card {
   position: relative;
-  background: #FFFFFF;
+  background: transparent;
   border-radius: var(--radius-xl);
-  padding: 24px;
-  border: 1px solid var(--color-border);
-  box-shadow: 0 25px 60px rgba(14, 21, 36, 0.08);
+  padding: 0;
+  border: 1px solid rgba(194, 162, 111, 0.25);
+  box-shadow: 0 30px 80px rgba(14, 21, 36, 0.25);
   overflow: visible;
 }
 
 .hero-art-image,
 .hero-art-media {
   width: 100%;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   display: block;
   object-fit: cover;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* Callout Pins pointing to anatomical facial structures */
@@ -871,55 +872,120 @@ button {
   line-height: 1.6;
 }
 
-/* Tablet Showcase Box (Dra. Holding Tablet with 3D Surgical Planning) */
-.diff-tablet-showcase {
-  background: var(--color-navy);
-  border-radius: var(--radius-xl);
+/* ==========================================================================
+   SEÇÃO DE PLANEJAMENTO & TECNOLOGIA (DOBRA FULL-BLEED COM FOTO DE FUNDO)
+   ========================================================================== */
+.tablet-dobra-section {
+  position: relative;
+  background: #0A0F1A;
+  color: #FFFFFF;
   overflow: hidden;
-  border: 1px solid var(--color-border-dark);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 720px;
+  display: flex;
   align-items: center;
 }
 
-.diff-tablet-img-col {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
+.tablet-dobra-bg {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.diff-tablet-img-col img {
+.tablet-dobra-photo-col {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tablet-dobra-photo-col img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 68% 10%;
-  transition: transform 0.6s ease;
+  object-position: 70% 8%;
 }
 
-.diff-tablet-img-col:hover img {
-  transform: scale(1.02);
+.tablet-dobra-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg, 
+    rgba(10, 15, 26, 0.15) 0%, 
+    rgba(10, 15, 26, 0.05) 55%, 
+    rgba(10, 15, 26, 0.75) 85%, 
+    #0A0F1A 100%
+  );
 }
 
-.diff-tablet-content-col {
-  padding: 60px 50px;
+.tablet-dobra-content-bg {
+  background: radial-gradient(circle at 75% 50%, #151D2E 0%, #0A0F1A 85%);
+}
+
+.tablet-dobra-container {
+  position: relative;
+  z-index: 3;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.tablet-dobra-grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1.1fr;
+  gap: 0;
+  align-items: center;
+  min-height: 560px;
+}
+
+.tablet-dobra-visual-col {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.tablet-dobra-badge-floating {
+  background: rgba(14, 21, 36, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-gold);
+  padding: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Linha divisória vertical solicitada pelo usuário: "mantem essa linha dividindo ai" */
+.tablet-dobra-divider {
+  width: 1px;
+  height: 100%;
+  min-height: 480px;
+  background: linear-gradient(180deg, transparent 0%, rgba(194, 162, 111, 0.6) 20%, rgba(194, 162, 111, 0.6) 80%, transparent 100%);
+  box-shadow: 0 0 12px rgba(194, 162, 111, 0.35);
+}
+
+.tablet-dobra-content-col {
+  padding-left: 60px;
   display: flex;
   flex-direction: column;
 }
 
-.diff-tablet-content-col h3 {
+.tablet-dobra-title {
   font-family: var(--font-serif);
-  font-size: 2.35rem;
+  font-size: 2.8rem;
   color: #FFFFFF;
-  line-height: 1.2;
-  margin: 14px 0 18px;
+  line-height: 1.15;
+  margin: 12px 0 18px;
 }
 
-.diff-tablet-content-col p {
-  font-size: 1rem;
-  color: #A2B0C6;
+.tablet-dobra-lead {
+  font-size: 1.05rem;
+  color: #CBD5E1;
   line-height: 1.65;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
 .diff-tech-points {
