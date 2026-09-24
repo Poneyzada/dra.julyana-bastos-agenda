@@ -1043,11 +1043,11 @@ button {
 }
 
 /* ==========================================================================
-   SEÇÃO DE VALOR — CONSULTA (R$ 500)
+   SEÇÃO DE VALOR — CONSULTA (R$ 500) & LIQUID GLASS CARD MOBILE
    ========================================================================== */
 .pricing-section {
-  padding: 48px 0;
-  background: linear-gradient(180deg, var(--color-navy) 0%, #151C2C 100%);
+  padding: 54px 0 60px;
+  background: linear-gradient(180deg, var(--color-navy) 0%, #0D1424 100%);
   color: #FFFFFF;
   position: relative;
   overflow: hidden;
@@ -1056,122 +1056,224 @@ button {
 .pricing-section::before {
   content: "";
   position: absolute;
-  top: -100px;
-  right: -100px;
-  width: 300px;
-  height: 300px;
+  top: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(194, 162, 111, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(194, 162, 111, 0.16) 0%, transparent 70%);
   pointer-events: none;
 }
 
-.pricing-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1.5px solid var(--color-border-gold);
-  border-radius: var(--radius-xl);
-  padding: 30px 22px;
-  backdrop-filter: blur(14px);
-  position: relative;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-  margin-top: 20px;
-}
-
-.pricing-badge-top {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, #D4B988 0%, #B89358 100%);
-  color: #12161F;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 5px 16px;
-  border-radius: var(--radius-full);
-  white-space: nowrap;
-  box-shadow: var(--shadow-sm);
-}
-
-.pricing-header {
+.pricing-header-mobile {
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
-.pricing-title {
+.pricing-mobile-intro {
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  line-height: 1.5;
+  margin-top: 6px;
+  padding: 0 4px;
+}
+
+.pricing-inclusions-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(194, 162, 111, 0.22);
+  border-radius: var(--radius-lg);
+  padding: 22px 18px;
+  margin-bottom: 26px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.pricing-inclusions-title {
   font-family: var(--font-serif);
-  font-size: 1.45rem;
-  color: #FFFFFF;
-  margin-bottom: 8px;
-}
-
-.pricing-amount-wrap {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 4px;
-  margin: 14px 0 6px;
-}
-
-.pricing-currency {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.08rem;
   color: var(--color-gold-light);
+  margin-bottom: 14px;
+  text-align: left;
 }
 
-.pricing-amount {
-  font-family: var(--font-serif);
-  font-size: 3.4rem;
-  font-weight: 700;
-  line-height: 1;
-  color: #FFFFFF;
-}
-
-.pricing-period {
-  font-size: 0.78rem;
-  color: #94A3B8;
-  display: block;
-}
-
-.pricing-features-list {
+.pricing-inclusions-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin: 24px 0 28px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 22px 0;
+  gap: 12px;
 }
 
-.pricing-feature-item {
+.pricing-inclusion-row {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   color: #E2E8F0;
   line-height: 1.45;
 }
 
-.pricing-feature-icon {
+.pricing-check-icon {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background: rgba(194, 162, 111, 0.2);
+  border: 1px solid var(--color-gold);
   color: var(--color-gold-light);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
   margin-top: 1px;
 }
 
-.pricing-note {
-  font-size: 0.75rem;
-  color: #94A3B8;
+/* Liquid Glass Card Component Adapted for Mobile */
+.liquid-card-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.liquid-glass-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(14, 21, 36, 0.48);
+  backdrop-filter: blur(18px) url("#container-glass");
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.2),
+    0 20px 40px rgba(0, 0, 0, 0.45),
+    inset 3px 3px 1px -3.5px rgba(255, 255, 255, 0.2),
+    inset -3px -3px 1px -3.5px rgba(255, 255, 255, 0.85),
+    inset 1px 1px 1px -0.5px rgba(255, 255, 255, 0.6),
+    inset -1px -1px 1px -0.5px rgba(255, 255, 255, 0.6),
+    inset 0 0 8px 6px rgba(255, 255, 255, 0.08),
+    inset 0 0 2px 2px rgba(255, 255, 255, 0.06),
+    0 0 24px rgba(194, 162, 111, 0.25);
+  transition: all 0.3s ease;
+}
+
+.liquid-glass-card:active {
+  transform: scale(0.99);
+}
+
+.liquid-card-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.liquid-card-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  opacity: 0.26;
+  filter: grayscale(35%) contrast(1.1);
+}
+
+.liquid-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 21, 36, 0.52) 0%, rgba(14, 21, 36, 0.94) 75%, #0E1524 100%);
+}
+
+.liquid-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+}
+
+.liquid-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  margin-bottom: 18px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.liquid-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  box-shadow: 0 0 8px var(--color-gold);
+}
+
+.liquid-card-header {
+  margin-bottom: 20px;
+}
+
+.liquid-card-subtitle {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #A2B0C6;
+  font-weight: 700;
+  display: block;
+}
+
+.liquid-pricing-wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin: 8px 0 4px;
+}
+
+.liquid-pricing-curr {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-gold-light);
+}
+
+.liquid-pricing-number {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.liquid-pricing-caption {
+  font-size: 0.78rem;
+  color: #CBD5E1;
+}
+
+.liquid-card-cta-box {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.liquid-btn {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 0.92rem;
+  box-shadow: 0 8px 25px rgba(194, 162, 111, 0.4);
+}
+
+.liquid-card-footnote {
+  font-size: 0.72rem;
+  color: #94A3B8;
   line-height: 1.45;
-  margin-top: 16px;
 }
 
 /* ==========================================================================

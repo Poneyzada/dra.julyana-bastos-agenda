@@ -1213,43 +1213,171 @@ button {
   margin-top: 3px;
 }
 
-.pricing-right-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-lg);
-  padding: 36px 30px;
-  text-align: center;
+/* ==========================================================================
+   LIQUID GLASS CARD — COMPONENTE 21ST.DEV ADAPTADO
+   ========================================================================== */
+.liquid-card-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.liquid-glass-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(14, 21, 36, 0.45);
+  backdrop-filter: blur(20px) url("#container-glass");
+  -webkit-backdrop-filter: blur(20px);
+  /* Sombras e chanfros ópticos de refração líquida */
+  box-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.1),
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    inset 3px 3px 1px -3.5px rgba(255, 255, 255, 0.15),
+    inset -3px -3px 1px -3.5px rgba(255, 255, 255, 0.85),
+    inset 1px 1px 1px -0.5px rgba(255, 255, 255, 0.6),
+    inset -1px -1px 1px -0.5px rgba(255, 255, 255, 0.6),
+    inset 0 0 8px 6px rgba(255, 255, 255, 0.08),
+    inset 0 0 2px 2px rgba(255, 255, 255, 0.06),
+    0 0 24px rgba(194, 162, 111, 0.22);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(194, 162, 111, 0.45);
+  box-shadow: 
+    0 0 14px rgba(0, 0, 0, 0.15),
+    0 25px 50px rgba(0, 0, 0, 0.5),
+    inset 3px 3px 1px -3.5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 1px -3.5px rgba(255, 255, 255, 0.95),
+    inset 1px 1px 1px -0.5px rgba(255, 255, 255, 0.7),
+    inset -1px -1px 1px -0.5px rgba(255, 255, 255, 0.7),
+    inset 0 0 10px 8px rgba(194, 162, 111, 0.18),
+    0 0 35px rgba(194, 162, 111, 0.35);
+}
+
+.liquid-card-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.liquid-card-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  opacity: 0.24;
+  filter: grayscale(40%) contrast(1.1);
+  transform: scale(1.05);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.liquid-glass-card:hover .liquid-card-bg-img {
+  transform: scale(1.1);
+  opacity: 0.32;
+}
+
+.liquid-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 21, 36, 0.5) 0%, rgba(14, 21, 36, 0.92) 75%, #0E1524 100%);
+}
+
+.liquid-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 38px 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-.pricing-val-wrap {
+.liquid-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.liquid-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  box-shadow: 0 0 8px var(--color-gold);
+}
+
+.liquid-card-header {
+  margin-bottom: 24px;
+}
+
+.liquid-card-subtitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #A2B0C6;
+  font-weight: 700;
+  display: block;
+}
+
+.liquid-pricing-wrap {
   display: flex;
   align-items: baseline;
   justify-content: center;
   gap: 6px;
-  margin: 12px 0 6px;
+  margin: 10px 0 6px;
 }
 
-.pricing-curr {
+.liquid-pricing-curr {
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--color-gold-light);
 }
 
-.pricing-number {
+.liquid-pricing-number {
   font-family: var(--font-serif);
   font-size: 4.8rem;
   font-weight: 700;
   color: #FFFFFF;
   line-height: 1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.pricing-note-sub {
-  font-size: 0.8rem;
+.liquid-pricing-caption {
+  font-size: 0.82rem;
+  color: #CBD5E1;
+}
+
+.liquid-card-cta-box {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.liquid-btn {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 25px rgba(194, 162, 111, 0.4);
+}
+
+.liquid-card-footnote {
+  font-size: 0.74rem;
   color: #94A3B8;
-  margin-bottom: 24px;
+  line-height: 1.45;
 }
 
 /* ==========================================================================
