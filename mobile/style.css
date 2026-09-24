@@ -322,12 +322,70 @@ button {
 }
 
 /* ==========================================================================
-   HERO SECTION
+   HERO SECTION MOBILE (DOBRA FULL-BLEED COM VÍDEO VERTICAL DE FUNDO)
    ========================================================================== */
 .hero-section {
-  padding: 30px 0 40px;
   position: relative;
-  background: linear-gradient(180deg, rgba(250, 249, 246, 1) 0%, rgba(244, 242, 236, 0.8) 100%);
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #0A0F1A;
+  color: #FFFFFF;
+  overflow: hidden;
+  padding: 32px 0 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-video-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.95;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  /* Gradiente vertical contínuo: escuro no topo para ler o título e subtítulo com perfeição, 
+     abertura suave no meio para ver os artesãos polindo a escultura, 
+     e escuro na base para o botão de CTA brilhar com contraste total */
+  background: linear-gradient(
+    180deg,
+    rgba(10, 15, 26, 0.95) 0%,
+    rgba(10, 15, 26, 0.88) 26%,
+    rgba(10, 15, 26, 0.28) 46%,
+    rgba(10, 15, 26, 0.40) 65%,
+    rgba(10, 15, 26, 0.92) 82%,
+    #0A0F1A 100%
+  );
+}
+
+.hero-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  min-height: calc(100vh - 110px);
+  min-height: calc(100dvh - 110px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-top-block {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-tag {
@@ -338,7 +396,7 @@ button {
   font-family: var(--font-serif);
   font-size: 2.15rem;
   line-height: 1.15;
-  color: var(--color-navy);
+  color: #FFFFFF;
   font-weight: 700;
   margin-bottom: 16px;
   letter-spacing: -0.01em;
@@ -346,76 +404,78 @@ button {
 
 .hero-title em {
   font-style: italic;
-  color: var(--color-gold-dark);
+  color: var(--color-gold-light);
   font-weight: 600;
   position: relative;
+  text-shadow: 0 0 20px rgba(226, 194, 133, 0.35);
 }
 
 .hero-subtitle {
   font-size: 0.95rem;
-  color: var(--color-text-muted);
+  color: #CBD5E1;
   line-height: 1.55;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
-/* Hero Visual Card: Vídeo de Fundo Orgânico com Profundidade Atmosférica (Sem Quadrado/Bordas) */
-.hero-visual-card {
-  position: relative;
-  margin: 16px 0 24px;
-  background: transparent;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-  border: none;
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
+.hero-subtitle strong {
+  color: #FFFFFF;
+}
+
+/* Doctor Chip in Luxury Dark Glass */
+.hero-doc-chip {
+  display: inline-flex;
   align-items: center;
+  gap: 12px;
+  background: rgba(14, 21, 36, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(194, 162, 111, 0.35);
+  padding: 8px 16px 8px 10px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  width: fit-content;
 }
 
-.hero-visual-card::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120%;
-  height: 90%;
-  background: radial-gradient(ellipse at center, rgba(142, 178, 201, 0.28) 0%, rgba(194, 162, 111, 0.1) 45%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
+.hero-doc-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-gold);
 }
 
-.hero-art-img,
-.hero-art-video {
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  border: none;
-  outline: none;
-  /* Suavização de bordas em formato elíptico que elimina qualquer aspecto de quadrado */
-  mask-image: radial-gradient(ellipse 92% 94% at 50% 50%, black 75%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 92% 94% at 50% 50%, black 75%, transparent 100%);
-  filter: drop-shadow(0 15px 35px rgba(103, 153, 178, 0.35));
+.hero-doc-info h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.hero-doc-info p {
+  font-size: 0.72rem;
+  color: #CBD5E1;
+}
+
+/* Janela Central com respiração do vídeo e badge */
+.hero-mid-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 20px;
+  min-height: 120px;
 }
 
 .hero-art-caption {
-  position: relative;
-  margin-top: -24px;
-  margin-bottom: 8px;
-  z-index: 2;
-  background: rgba(14, 21, 36, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 10px 16px;
+  background: rgba(14, 21, 36, 0.90);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 10px 18px;
   border-radius: var(--radius-full);
   border: 1px solid rgba(194, 162, 111, 0.4);
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   width: fit-content;
 }
 
@@ -442,51 +502,19 @@ button {
   font-weight: 400;
 }
 
-/* Hero Doctor Floating Chip */
-.hero-doc-chip {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #FFFFFF;
-  border: 1px solid var(--color-border);
-  padding: 10px 14px;
-  border-radius: var(--radius-lg);
-  margin-bottom: 20px;
-  box-shadow: var(--shadow-sm);
-}
-
-.hero-doc-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--color-gold-light);
-}
-
-.hero-doc-info h4 {
-  font-size: 0.88rem;
-  color: var(--color-navy);
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.hero-doc-info p {
-  font-size: 0.72rem;
-  color: var(--color-text-muted);
-}
-
 .hero-cta-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 10px;
 }
 
 .hero-compliance-note {
   font-size: 0.72rem;
-  color: var(--color-text-muted);
+  color: #94A3B8;
   text-align: center;
   line-height: 1.4;
-  margin-top: 10px;
+  margin-top: 6px;
   padding: 0 8px;
 }
 

@@ -61,52 +61,56 @@
     </div>
   </header>
 
-  <!-- 2. HERO SECTION -->
+  <!-- 2. HERO SECTION (DOBRA FULL-BLEED COM VÍDEO DE FUNDO) -->
   <section class="hero-section" id="hero">
-    <div class="container hero-grid">
-      <!-- Coluna Esquerda: Conteúdo e Headline -->
-      <div class="hero-content">
-        <div>
-          <span class="badge-pill badge-gold">Cirurgia de Cabeça e Pescoço & Cirurgia Facial</span>
-        </div>
+    <!-- Vídeo Anatômico em Alta Definição como Fundo Absoluto da Dobra Toda -->
+    <div class="hero-video-backdrop">
+      <video class="hero-bg-video hero-art-video" autoplay loop muted playsinline poster="../assets/images/anatomical-head-neck.webp" preload="auto">
+        <source src="../assets/videos/video-hero-desktop.mp4" type="video/mp4">
+        <source src="../assets/videos/hero-desktop.mp4" type="video/mp4">
+        <source src="../assets/images/video-hero-desktop.mp4" type="video/mp4">
+        <img src="../assets/images/anatomical-head-neck.webp" alt="Ilustração da Anatomia Facial e Cervical Profunda da Face com elementos artísticos botânicos" class="hero-art-image">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
 
-        <h1 class="hero-headline">
-          Rejuvenescimento facial e cervical com <em>segurança</em> de quem domina a anatomia da cabeça e do pescoço
-        </h1>
+    <div class="container hero-container">
+      <div class="hero-grid">
+        <!-- Coluna Esquerda: Conteúdo e Headline -->
+        <div class="hero-content">
+          <div>
+            <span class="badge-pill badge-gold">Cirurgia de Cabeça e Pescoço & Cirurgia Facial</span>
+          </div>
 
-        <p class="hero-subheadline">
-          Consulta de avaliação individualizada para planejamento cirúrgico facial — conduzida pela <strong>Dra. Julyana Bastos</strong>, cirurgiã de Cabeça e Pescoço em Feira de Santana (BA).
-        </p>
+          <h1 class="hero-headline">
+            Rejuvenescimento facial e cervical com <em>segurança</em> de quem domina a anatomia da cabeça e do pescoço
+          </h1>
 
-        <div class="hero-actions">
-          <a href="#valor" class="btn btn-gold hero-cta-btn" data-whatsapp>
-            Agendar minha avaliação — R$ 500
-          </a>
-          <p class="hero-compliance-note">
-            Atendimento personalizado. Indicação de procedimento cirúrgico sujeita à avaliação médica presencial individual.
+          <p class="hero-subheadline">
+            Consulta de avaliação individualizada para planejamento cirúrgico facial — conduzida pela <strong>Dra. Julyana Bastos</strong>, cirurgiã de Cabeça e Pescoço em Feira de Santana (BA).
           </p>
-        </div>
 
-        <!-- Floating Doctor Chip -->
-        <div class="hero-doctor-badge">
-          <img src="../assets/images/dra-avatar.webp" alt="Dra. Julyana Bastos">
-          <div class="hero-doctor-badge-info">
-            <h4>Dra. Julyana Bastos</h4>
-            <p>CRM-BA 32376 | RQE 23272 • Cirurgia de Cabeça e Pescoço</p>
+          <div class="hero-actions">
+            <a href="#valor" class="btn btn-gold hero-cta-btn" data-whatsapp>
+              Agendar minha avaliação — R$ 500
+            </a>
+            <p class="hero-compliance-note">
+              Atendimento personalizado. Indicação de procedimento cirúrgico sujeita à avaliação médica presencial individual.
+            </p>
+          </div>
+
+          <!-- Floating Doctor Chip -->
+          <div class="hero-doctor-badge">
+            <img src="../assets/images/dra-avatar.webp" alt="Dra. Julyana Bastos">
+            <div class="hero-doctor-badge-info">
+              <h4>Dra. Julyana Bastos</h4>
+              <p>CRM-BA 32376 | RQE 23272 • Cirurgia de Cabeça e Pescoço</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Coluna Direita: Arte Anatômica / Vídeo Facial com Callouts Técnicos -->
-      <div class="hero-visual-wrapper">
-        <div class="hero-art-card">
-          <video class="hero-art-media hero-art-video" autoplay loop muted playsinline poster="../assets/images/anatomical-head-neck.webp" preload="auto">
-            <source src="../assets/videos/video-hero-desktop.mp4" type="video/mp4">
-            <source src="../assets/videos/hero-desktop.mp4" type="video/mp4">
-            <source src="../assets/images/video-hero-desktop.mp4" type="video/mp4">
-            <img src="../assets/images/anatomical-head-neck.webp" alt="Ilustração da Anatomia Facial e Cervical Profunda da Face com elementos artísticos botânicos" class="hero-art-image">
-          </video>
-          
+        <!-- Coluna Direita: Pins Anatômicos flutuando sobre o Vídeo de Fundo -->
+        <div class="hero-pins-col">
           <!-- Pin Callouts Anatômicos -->
           <div class="callout-pin pin-1">
             <span class="callout-pin-dot"></span>
@@ -127,16 +131,16 @@
             <span class="callout-pin-dot"></span>
             Platisma & Contorno Cervical
           </div>
-        </div>
 
-        <!-- Floating Stat Badge -->
-        <div class="hero-floating-stat">
-          <div class="hero-stat-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          </div>
-          <div class="hero-stat-text">
-            <h5>Segurança Anatômica Profunda</h5>
-            <p>Planejamento cirúrgico sob medida</p>
+          <!-- Floating Stat Badge -->
+          <div class="hero-floating-stat">
+            <div class="hero-stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div class="hero-stat-text">
+              <h5>Segurança Anatômica Profunda</h5>
+              <p>Planejamento cirúrgico sob medida</p>
+            </div>
           </div>
         </div>
       </div>

@@ -62,38 +62,45 @@
     </nav>
   </header>
 
-  <!-- 2. HERO SECTION -->
+  <!-- 2. HERO SECTION (DOBRA FULL-BLEED COM VÍDEO VERTICAL DE FUNDO) -->
   <section class="hero-section" id="hero">
-    <div class="container">
-      <div class="hero-tag">
-        <span class="badge-pill badge-gold">Cirurgia de Cabeça e Pescoço & Cirurgia Facial</span>
-      </div>
+    <!-- Vídeo Mobile em Alta Definição como Fundo Absoluto da Dobra Toda -->
+    <div class="hero-video-backdrop">
+      <video class="hero-bg-video hero-art-video" autoplay loop muted playsinline poster="../assets/images/anatomical-head-neck.webp" preload="auto">
+        <source src="../assets/videos/video-hero-mobile.mp4" type="video/mp4">
+        <source src="../assets/videos/hero-mobile.mp4" type="video/mp4">
+        <source src="../assets/images/video-hero-mobile.mp4" type="video/mp4">
+        <img src="../assets/images/anatomical-head-neck.webp" alt="Ilustração de Anatomia Facial e Cervical Profunda com elementos florais" class="hero-art-img">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
 
-      <h1 class="hero-title">
-        Rejuvenescimento facial e cervical com <em>segurança</em> de quem domina a anatomia da cabeça e do pescoço
-      </h1>
+    <div class="container hero-container">
+      <div class="hero-top-block">
+        <div class="hero-tag">
+          <span class="badge-pill badge-gold">Cirurgia de Cabeça e Pescoço & Cirurgia Facial</span>
+        </div>
 
-      <p class="hero-subtitle">
-        Consulta de avaliação individualizada para planejamento cirúrgico facial — conduzida pela <strong>Dra. Julyana Bastos</strong>, cirurgiã de Cabeça e Pescoço em Feira de Santana (BA).
-      </p>
+        <h1 class="hero-title">
+          Rejuvenescimento facial e cervical com <em>segurança</em> de quem domina a anatomia da cabeça e do pescoço
+        </h1>
 
-      <!-- Doctor chip -->
-      <div class="hero-doc-chip">
-        <img src="../assets/images/dra-avatar.webp" alt="Dra. Julyana Bastos" class="hero-doc-avatar">
-        <div class="hero-doc-info">
-          <h4>Dra. Julyana Bastos</h4>
-          <p>CRM-BA 32376 | RQE 23272</p>
+        <p class="hero-subtitle">
+          Consulta de avaliação individualizada para planejamento cirúrgico facial — conduzida pela <strong>Dra. Julyana Bastos</strong>, cirurgiã de Cabeça e Pescoço em Feira de Santana (BA).
+        </p>
+
+        <!-- Doctor chip -->
+        <div class="hero-doc-chip">
+          <img src="../assets/images/dra-avatar.webp" alt="Dra. Julyana Bastos" class="hero-doc-avatar">
+          <div class="hero-doc-info">
+            <h4>Dra. Julyana Bastos</h4>
+            <p>CRM-BA 32376 | RQE 23272 • Cirurgia de Cabeça e Pescoço</p>
+          </div>
         </div>
       </div>
 
-      <!-- Hero Visual: Vídeo / Arte Anatômica Floral -->
-      <div class="hero-visual-card">
-        <video class="hero-art-media hero-art-img" autoplay loop muted playsinline poster="../assets/images/anatomical-head-neck.webp" preload="auto">
-          <source src="../assets/videos/video-hero-mobile.mp4" type="video/mp4">
-          <source src="../assets/videos/hero-mobile.mp4" type="video/mp4">
-          <source src="../assets/images/video-hero-mobile.mp4" type="video/mp4">
-          <img src="../assets/images/anatomical-head-neck.webp" alt="Ilustração de Anatomia Facial e Cervical Profunda com elementos florais" class="hero-art-img">
-        </video>
+      <!-- Janela Central: Espaço livre onde a animação da escultura brilha com badge de precisão -->
+      <div class="hero-mid-window">
         <div class="hero-art-caption">
           <div class="hero-art-caption-dot"></div>
           <div class="hero-art-caption-text">

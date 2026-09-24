@@ -314,20 +314,72 @@ button {
 }
 
 /* ==========================================================================
-   HERO SECTION (DESKTOP DUAL-COLUMN LAYOUT)
+   HERO SECTION (DOBRA FULL-BLEED COM VÍDEO DE FUNDO)
    ========================================================================== */
 .hero-section {
-  padding: 60px 0 80px;
-  background: radial-gradient(circle at 80% 30%, rgba(194, 162, 111, 0.08) 0%, transparent 60%),
-              linear-gradient(180deg, #FAF9F6 0%, #F5F3EC 100%);
   position: relative;
+  min-height: 820px;
+  background: #0A0F1A;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-video-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  opacity: 0.95;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  /* Gradiente multi-fase: preto obsidiana profundo à esquerda para texto 100% legível, 
+     e transparência gradual à direita para revelar a escultura botânica em movimento */
+  background: 
+    linear-gradient(90deg, 
+      #0A0F1A 0%, 
+      rgba(10, 15, 26, 0.98) 35%, 
+      rgba(10, 15, 26, 0.90) 48%, 
+      rgba(10, 15, 26, 0.45) 66%, 
+      rgba(10, 15, 26, 0.15) 82%, 
+      rgba(10, 15, 26, 0.40) 100%
+    ),
+    linear-gradient(180deg, 
+      rgba(10, 15, 26, 0.7) 0%, 
+      transparent 15%, 
+      transparent 80%, 
+      #0A0F1A 100%
+    );
+}
+
+.hero-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 70px;
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 60px;
+  gap: 50px;
   align-items: center;
 }
 
@@ -340,7 +392,7 @@ button {
   font-family: var(--font-serif);
   font-size: 3.4rem;
   line-height: 1.12;
-  color: var(--color-navy);
+  color: #FFFFFF;
   font-weight: 700;
   margin: 18px 0 22px;
   letter-spacing: -0.02em;
@@ -348,29 +400,34 @@ button {
 
 .hero-headline em {
   font-style: italic;
-  color: var(--color-gold-dark);
+  color: var(--color-gold-light);
   font-weight: 600;
   position: relative;
+  text-shadow: 0 0 25px rgba(226, 194, 133, 0.35);
 }
 
 .hero-headline em::after {
   content: "";
   position: absolute;
-  bottom: 6px;
+  bottom: 4px;
   left: 0;
   right: 0;
-  height: 6px;
-  background: var(--color-gold-soft);
-  z-index: -1;
+  height: 4px;
+  background: rgba(194, 162, 111, 0.5);
   border-radius: 4px;
+  z-index: -1;
 }
 
 .hero-subheadline {
   font-size: 1.12rem;
-  color: var(--color-text-muted);
+  color: #CBD5E1;
   line-height: 1.6;
   margin-bottom: 32px;
-  max-width: 90%;
+  max-width: 92%;
+}
+
+.hero-subheadline strong {
+  color: #FFFFFF;
 }
 
 .hero-actions {
@@ -387,20 +444,22 @@ button {
 
 .hero-compliance-note {
   font-size: 0.78rem;
-  color: var(--color-text-muted);
+  color: #94A3B8;
   line-height: 1.45;
 }
 
-/* Hero Doctor Floating Chip */
+/* Hero Doctor Floating Chip in Luxury Dark Glass */
 .hero-doctor-badge {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  background: #FFFFFF;
-  border: 1px solid var(--color-border);
+  background: rgba(14, 21, 36, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(194, 162, 111, 0.35);
   padding: 10px 18px 10px 12px;
   border-radius: var(--radius-full);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   margin-top: 36px;
   width: fit-content;
 }
@@ -410,65 +469,26 @@ button {
   height: 46px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--color-gold-light);
+  border: 2px solid var(--color-gold);
 }
 
 .hero-doctor-badge-info h4 {
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--color-navy);
+  color: #FFFFFF;
   line-height: 1.2;
 }
 
 .hero-doctor-badge-info p {
   font-size: 0.74rem;
-  color: var(--color-text-muted);
+  color: #CBD5E1;
 }
 
-/* Hero Visual: Anatomical Art / Video with Callout Pins (Seamless Background Depth) */
-.hero-visual-wrapper {
+/* Hero Pins Column: Floating over background video without any box */
+.hero-pins-col {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-visual-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle at center, rgba(142, 178, 201, 0.25) 0%, rgba(194, 162, 111, 0.08) 45%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.hero-art-card {
-  position: relative;
+  height: 520px;
   width: 100%;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  overflow: visible;
-  z-index: 1;
-}
-
-.hero-art-image,
-.hero-art-media {
-  width: 100%;
-  border-radius: var(--radius-2xl);
-  display: block;
-  object-fit: cover;
-  border: none;
-  outline: none;
-  /* Suavização de bordas para integrar como fundo vivo e não parecer um quadrado */
-  mask-image: radial-gradient(ellipse 94% 94% at 50% 50%, black 72%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 94% 94% at 50% 50%, black 72%, transparent 100%);
-  filter: drop-shadow(0 25px 60px rgba(103, 153, 178, 0.35));
 }
 
 /* Callout Pins pointing to anatomical facial structures */
@@ -477,16 +497,16 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(10, 15, 26, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 8px 14px;
+  padding: 9px 16px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--color-border-gold);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  font-size: 0.76rem;
+  border: 1px solid rgba(194, 162, 111, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  font-size: 0.78rem;
   font-weight: 700;
-  color: var(--color-navy);
+  color: #FFFFFF;
   white-space: nowrap;
   transition: all 0.3s ease;
   z-index: 10;
@@ -494,76 +514,80 @@ button {
 
 .callout-pin:hover {
   transform: scale(1.05);
-  box-shadow: 0 14px 30px rgba(194, 162, 111, 0.3);
-  border-color: var(--color-gold);
+  border-color: var(--color-gold-light);
+  box-shadow: 0 14px 35px rgba(194, 162, 111, 0.4);
 }
 
 .callout-pin-dot {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--color-gold);
-  box-shadow: 0 0 0 4px var(--color-gold-soft);
+  box-shadow: 0 0 0 4px rgba(194, 162, 111, 0.3);
 }
 
-/* Pin Positions */
+/* Pin Positions pointing gracefully to anatomical head & neck in background */
 .pin-1 {
-  top: 14%;
-  right: -5%;
+  top: 10%;
+  right: 2%;
 }
 
 .pin-2 {
-  top: 44%;
-  left: -8%;
+  top: 36%;
+  left: 2%;
 }
 
 .pin-3 {
-  bottom: 28%;
-  left: -6%;
+  top: 60%;
+  right: 6%;
 }
 
 .pin-4 {
-  bottom: 8%;
-  right: -4%;
+  top: 82%;
+  left: 6%;
 }
 
-/* Floating Metric Badges */
+/* Floating Metric Badge in Hero */
 .hero-floating-stat {
   position: absolute;
-  bottom: -20px;
-  right: 20px;
-  background: var(--color-navy);
-  color: #FFFFFF;
-  padding: 14px 22px;
+  bottom: -10px;
+  right: 0;
+  background: rgba(14, 21, 36, 0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(194, 162, 111, 0.35);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border-dark);
-  box-shadow: var(--shadow-lg);
+  padding: 14px 20px;
   display: flex;
   align-items: center;
   gap: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   z-index: 15;
 }
 
 .hero-stat-icon {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: var(--color-gold-soft);
-  color: var(--color-gold-light);
+  background: rgba(194, 162, 111, 0.18);
+  border: 1px solid rgba(194, 162, 111, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-gold);
+  flex-shrink: 0;
 }
 
 .hero-stat-text h5 {
   font-size: 0.88rem;
   font-weight: 700;
   color: #FFFFFF;
+  margin-bottom: 2px;
 }
 
 .hero-stat-text p {
-  font-size: 0.72rem;
-  color: #A2B0C6;
+  font-size: 0.74rem;
+  color: #CBD5E1;
 }
 
 /* ==========================================================================

@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 5. Hero Video Autoplay Assurance
-  const heroVideo = document.querySelector('.hero-art-video');
+  const heroVideo = document.querySelector('.hero-bg-video, .hero-art-video');
   if (heroVideo) {
     heroVideo.muted = true;
     heroVideo.defaultMuted = true;
