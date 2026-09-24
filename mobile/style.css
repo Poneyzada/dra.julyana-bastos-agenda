@@ -370,7 +370,8 @@ button {
   overflow: hidden;
 }
 
-.hero-art-img {
+.hero-art-img,
+.hero-art-video {
   width: 100%;
   border-radius: var(--radius-lg);
   object-fit: cover;
@@ -763,14 +764,16 @@ button {
 .tablet-feature-img-wrap {
   position: relative;
   overflow: hidden;
-  background: #000;
+  background: var(--color-navy);
 }
 
 .tablet-feature-img-wrap img {
   width: 100%;
-  aspect-ratio: 4/5;
+  height: auto;
+  max-height: 520px;
+  display: block;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: 68% 8%;
 }
 
 .tablet-feature-badge {
@@ -1360,7 +1363,7 @@ button {
   position: relative;
   background: radial-gradient(circle at 80% 90%, #1A253C 0%, #0A0F1A 80%);
   color: #FFFFFF;
-  padding: 50px 0 280px; /* Space for the doctor at bottom without any clipping */
+  padding: 48px 0 54px;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -1368,17 +1371,25 @@ button {
 .location-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #0A0F1A 0%, rgba(10, 15, 26, 0.88) 55%, rgba(10, 15, 26, 0.2) 100%);
+  background: linear-gradient(
+    180deg, 
+    #0A0F1A 0%, 
+    rgba(10, 15, 26, 0.45) 14%, 
+    rgba(10, 15, 26, 0.05) 30%, 
+    rgba(10, 15, 26, 0.48) 50%, 
+    rgba(10, 15, 26, 0.88) 75%, 
+    #0A0F1A 100%
+  );
   z-index: 2;
   pointer-events: none;
 }
 
 .location-doctor-backdrop {
   position: absolute;
-  right: -5%;
+  right: -6%;
   bottom: 0;
-  width: 92%;
-  max-width: 360px;
+  width: 96%;
+  max-width: 400px;
   z-index: 1;
   display: flex;
   align-items: flex-end;
@@ -1398,41 +1409,61 @@ button {
   z-index: 3;
 }
 
+.location-header-top {
+  position: relative;
+  z-index: 3;
+}
+
+/* Espaço livre para o rosto da Dra. brilhar totalmente desobstruído */
+.location-face-space {
+  height: 230px;
+  pointer-events: none;
+}
+
+.location-content-bottom {
+  position: relative;
+  z-index: 3;
+}
+
 .location-desc {
   font-size: 0.88rem;
   color: #CBD5E1;
   line-height: 1.55;
-  margin: 12px 0 16px;
+  margin: 0 0 16px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 .loc-cities-pill-wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 16px 0 20px;
+  margin: 14px 0 20px;
 }
 
 .loc-city-pill {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(14, 21, 36, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   padding: 6px 12px;
   border-radius: var(--radius-full);
   font-size: 0.74rem;
   color: #F1F5F9;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .loc-city-pill.highlight {
   background: linear-gradient(135deg, #D4B988 0%, #B89358 100%);
   color: #0E1524;
   font-weight: 700;
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 14px rgba(212, 185, 136, 0.35);
 }
 
 .loc-city-pill.state {
-  background: rgba(194, 162, 111, 0.18);
+  background: rgba(194, 162, 111, 0.25);
   color: var(--color-gold-light);
-  border-color: rgba(194, 162, 111, 0.3);
+  border-color: rgba(194, 162, 111, 0.35);
 }
 
 /* ==========================================================================

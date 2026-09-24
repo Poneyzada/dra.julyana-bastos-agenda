@@ -86,4 +86,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     observer.observe(footer);
   }
+
+  // 6. Hero Video Autoplay Assurance for Mobile Browsers
+  const heroVideo = document.querySelector('.hero-art-video');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Fallback silently if browser policies restrict before touch
+      });
+    }
+  }
 });

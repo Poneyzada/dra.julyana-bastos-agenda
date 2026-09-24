@@ -86,9 +86,14 @@
         </div>
       </div>
 
-      <!-- Hero Visual: Arte Anatômica Floral -->
+      <!-- Hero Visual: Vídeo / Arte Anatômica Floral -->
       <div class="hero-visual-card">
-        <img src="../assets/images/anatomical-head-neck.webp" alt="Ilustração de Anatomia Facial e Cervical Profunda com elementos florais" class="hero-art-img">
+        <video class="hero-art-media hero-art-img" autoplay loop muted playsinline poster="../assets/images/anatomical-head-neck.webp" preload="auto">
+          <source src="../assets/videos/video-hero-mobile.mp4" type="video/mp4">
+          <source src="../assets/videos/hero-mobile.mp4" type="video/mp4">
+          <source src="../assets/images/video-hero-mobile.mp4" type="video/mp4">
+          <img src="../assets/images/anatomical-head-neck.webp" alt="Ilustração de Anatomia Facial e Cervical Profunda com elementos florais" class="hero-art-img">
+        </video>
         <div class="hero-art-caption">
           <div class="hero-art-caption-dot"></div>
           <div class="hero-art-caption-text">
@@ -667,28 +672,36 @@
       <img src="../assets/images/dra-editorial-cutout.webp" alt="Dra. Julyana Bastos — Atendimento em Feira de Santana">
     </div>
     <div class="container location-inner">
-      <span class="section-label" style="color: var(--color-gold-light);">Onde Atendemos</span>
-      <h2 class="section-title" style="color: #FFFFFF;">Atendimento em Feira de Santana, com pacientes de toda a Bahia</h2>
-
-      <p class="location-desc">
-        Recebo pacientes de <strong>Feira de Santana e região</strong>, além de Petrolina, Luís Eduardo Magalhães, Salvador, Vitória da Conquista, Irecê, Serrinha, Coité e outras cidades — inclusive pacientes de fora do estado e do exterior.
-      </p>
-
-      <div class="loc-cities-pill-wrap">
-        <span class="loc-city-pill highlight">Feira de Santana (Base)</span>
-        <span class="loc-city-pill state">Salvador</span>
-        <span class="loc-city-pill">Petrolina</span>
-        <span class="loc-city-pill">LEM</span>
-        <span class="loc-city-pill">Vitória da Conquista</span>
-        <span class="loc-city-pill">Irecê</span>
-        <span class="loc-city-pill">Serrinha</span>
-        <span class="loc-city-pill">Coité</span>
-        <span class="loc-city-pill state">Exterior & Outros Estados</span>
+      <div class="location-header-top">
+        <span class="section-label" style="color: var(--color-gold-light);">Onde Atendemos</span>
+        <h2 class="section-title" style="color: #FFFFFF;">Atendimento em Feira de Santana, com pacientes de toda a Bahia</h2>
       </div>
 
-      <a href="#valor" class="btn btn-gold" data-whatsapp style="margin-top: 16px;">
-        Agendar Consulta — R$ 500
-      </a>
+      <!-- Espaço livre dedicado para o rosto da Dra. Julyana aparecer com total destaque sem texto na frente -->
+      <div class="location-face-space" aria-hidden="true"></div>
+
+      <!-- Bloco inferior posicionado confortavelmente sobre o blazer escuro -->
+      <div class="location-content-bottom">
+        <p class="location-desc">
+          Recebo pacientes de <strong>Feira de Santana e região</strong>, além de Petrolina, Luís Eduardo Magalhães, Salvador, Vitória da Conquista, Irecê, Serrinha, Coité e outras cidades — inclusive pacientes de fora do estado e do exterior.
+        </p>
+
+        <div class="loc-cities-pill-wrap">
+          <span class="loc-city-pill highlight">Feira de Santana (Base)</span>
+          <span class="loc-city-pill state">Salvador</span>
+          <span class="loc-city-pill">Petrolina</span>
+          <span class="loc-city-pill">LEM</span>
+          <span class="loc-city-pill">Vitória da Conquista</span>
+          <span class="loc-city-pill">Irecê</span>
+          <span class="loc-city-pill">Serrinha</span>
+          <span class="loc-city-pill">Coité</span>
+          <span class="loc-city-pill state">Exterior & Outros Estados</span>
+        </div>
+
+        <a href="#valor" class="btn btn-gold" data-whatsapp style="margin-top: 18px;">
+          Agendar Consulta — R$ 500
+        </a>
+      </div>
     </div>
   </section>
 

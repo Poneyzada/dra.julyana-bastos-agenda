@@ -57,4 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 5. Hero Video Autoplay Assurance
+  const heroVideo = document.querySelector('.hero-art-video');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Fallback silently if browser restrictions apply
+      });
+    }
+  }
 });
