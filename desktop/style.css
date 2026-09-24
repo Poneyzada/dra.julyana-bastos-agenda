@@ -1357,28 +1357,44 @@ button {
 .liquid-card-content {
   position: relative;
   z-index: 2;
-  padding: 38px 28px;
+  padding: 30px 28px 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
+/* Espaço acima do card onde o badge de atendimento exclusivo fica com destaque */
+.liquid-top-badge-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 5;
+}
+
 .liquid-card-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 6px 14px;
+  background: rgba(14, 21, 36, 0.92);
+  border: 1px solid rgba(194, 162, 111, 0.45);
+  padding: 8px 20px;
   border-radius: var(--radius-full);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-gold-light);
-  margin-bottom: 20px;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Área livre para o rosto da Dra. Julyana brilhar desobstruído dentro do vidro */
+.liquid-face-clearance {
+  height: 65px;
+  pointer-events: none;
 }
 
 .liquid-badge-dot {

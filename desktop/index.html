@@ -595,6 +595,14 @@
 
         <!-- Lado Direito: Liquid Glass Card (Inspirado no component 21st.dev) -->
         <div class="liquid-card-wrapper">
+          <!-- Badge de Atendimento Exclusivo posicionado no espaço acima do card (sai do rosto da Dra.) -->
+          <div class="liquid-top-badge-wrap">
+            <div class="liquid-card-badge">
+              <span class="liquid-badge-dot"></span>
+              Atendimento Presencial Exclusivo
+            </div>
+          </div>
+
           <div class="liquid-glass-card">
             <!-- Camada de imagem e profundidade no fundo do vidro -->
             <div class="liquid-card-backdrop">
@@ -602,12 +610,9 @@
               <div class="liquid-card-overlay"></div>
             </div>
 
-            <!-- Conteúdo Refinado do Vidro Líquido -->
+            <!-- Conteúdo Refinado do Vidro Líquido com rosto livre -->
             <div class="liquid-card-content">
-              <div class="liquid-card-badge">
-                <span class="liquid-badge-dot"></span>
-                Atendimento Presencial Exclusivo
-              </div>
+              <div class="liquid-face-clearance" aria-hidden="true"></div>
 
               <div class="liquid-card-header">
                 <span class="liquid-card-subtitle">Valor da Consulta</span>
