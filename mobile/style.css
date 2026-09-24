@@ -1252,20 +1252,55 @@ button {
 }
 
 /* ==========================================================================
-   LOCALIZAÇÃO & ATENDIMENTO
+   LOCALIZAÇÃO E ATENDIMENTO (MOBILE COM DRA. NO FUNDO E PROFUNDIDADE)
    ========================================================================== */
 .location-section {
-  padding: 46px 0;
-  background: #FFFFFF;
-  border-top: 1px solid var(--color-border);
+  position: relative;
+  background: radial-gradient(circle at 80% 90%, #1A253C 0%, #0A0F1A 80%);
+  color: #FFFFFF;
+  padding: 50px 0 280px; /* Space for the doctor at bottom without any clipping */
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.loc-card {
-  background: var(--color-surface-soft);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 24px 20px;
-  margin-top: 20px;
+.location-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #0A0F1A 0%, rgba(10, 15, 26, 0.88) 55%, rgba(10, 15, 26, 0.2) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.location-doctor-backdrop {
+  position: absolute;
+  right: -5%;
+  bottom: 0;
+  width: 92%;
+  max-width: 360px;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.location-doctor-backdrop img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 -10px 40px rgba(0, 0, 0, 0.7));
+}
+
+.location-inner {
+  position: relative;
+  z-index: 3;
+}
+
+.location-desc {
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  line-height: 1.55;
+  margin: 12px 0 16px;
 }
 
 .loc-cities-pill-wrap {
@@ -1276,64 +1311,26 @@ button {
 }
 
 .loc-city-pill {
-  background: #FFFFFF;
-  border: 1px solid var(--color-border);
-  padding: 5px 11px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
   border-radius: var(--radius-full);
   font-size: 0.74rem;
-  color: var(--color-navy);
-  font-weight: 600;
+  color: #F1F5F9;
+  backdrop-filter: blur(8px);
 }
 
 .loc-city-pill.highlight {
-  background: var(--color-navy);
-  color: #FFFFFF;
-  border-color: var(--color-navy);
+  background: linear-gradient(135deg, #D4B988 0%, #B89358 100%);
+  color: #0E1524;
+  font-weight: 700;
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .loc-city-pill.state {
-  background: var(--color-gold-soft);
-  color: var(--color-gold-dark);
-  border-color: var(--color-border-gold);
-}
-
-/* Editorial Photo Banner */
-.editorial-banner-box {
-  margin-top: 24px;
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border);
-}
-
-.editorial-banner-box img {
-  width: 100%;
-  aspect-ratio: 16/10;
-  object-fit: cover;
-  object-position: center 20%;
-}
-
-.editorial-banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(14, 21, 36, 0.85) 100%);
-  display: flex;
-  align-items: flex-end;
-  padding: 16px;
-}
-
-.editorial-banner-text {
-  color: #FFFFFF;
-  font-size: 0.78rem;
-  line-height: 1.35;
-}
-
-.editorial-banner-text strong {
-  display: block;
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
+  background: rgba(194, 162, 111, 0.18);
   color: var(--color-gold-light);
+  border-color: rgba(194, 162, 111, 0.3);
 }
 
 /* ==========================================================================
