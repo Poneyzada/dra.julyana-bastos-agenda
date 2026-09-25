@@ -876,6 +876,122 @@
     </div>
   </footer>
 
+  <!-- MODAL DE QUALIFICAÇÃO / ICP (TRIAGEM PRÉ-WHATSAPP) -->
+  <div class="icp-modal-backdrop" id="icpModalBackdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="icpModalTitle">
+    <div class="icp-modal-card">
+      <button class="icp-modal-close" id="icpModalClose" aria-label="Fechar janela">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="icp-modal-header">
+        <div class="icp-modal-avatar-wrap">
+          <img src="../assets/images/dra-avatar.webp" alt="Dra. Julyana Bastos" class="icp-modal-avatar">
+          <span class="icp-avatar-status" title="Atendimento prioritário disponível"></span>
+        </div>
+        <div class="icp-modal-header-text">
+          <span class="icp-modal-badge">Triagem de Atendimento Exclusivo</span>
+          <h3 id="icpModalTitle" class="icp-modal-title">Agendamento de Avaliação</h3>
+          <p class="icp-modal-subtitle">Dra. Julyana Bastos • CRM-BA 32376 | RQE 23272</p>
+        </div>
+      </div>
+
+      <div class="icp-modal-intro">
+        <p>Preencha os dados abaixo para direcionar seu contato com prioridade e mensagem personalizada à nossa equipe no WhatsApp:</p>
+      </div>
+
+      <form id="icpForm" class="icp-modal-form" novalidate>
+        <!-- Campo: Nome Completo -->
+        <div class="icp-form-group">
+          <label for="icpName" class="icp-form-label">
+            Nome Completo <span class="icp-required">*</span>
+          </label>
+          <div class="icp-input-wrap">
+            <svg class="icp-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <input type="text" id="icpName" name="nome" class="icp-form-input" placeholder="Seu nome completo" required autocomplete="name">
+          </div>
+          <span class="icp-form-error" id="icpNameError">Por favor, informe seu nome completo.</span>
+        </div>
+
+        <!-- Campo: WhatsApp com DDD -->
+        <div class="icp-form-group">
+          <label for="icpPhone" class="icp-form-label">
+            WhatsApp com DDD <span class="icp-required">*</span>
+          </label>
+          <div class="icp-input-wrap">
+            <svg class="icp-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <input type="tel" id="icpPhone" name="telefone" class="icp-form-input" placeholder="(75) 99999-9999" required autocomplete="tel">
+          </div>
+          <span class="icp-form-error" id="icpPhoneError">Informe um número de WhatsApp válido com DDD.</span>
+        </div>
+
+        <!-- Campo: E-mail (Opcional) -->
+        <div class="icp-form-group">
+          <label for="icpEmail" class="icp-form-label">
+            E-mail <span class="icp-optional">(opcional)</span>
+          </label>
+          <div class="icp-input-wrap">
+            <svg class="icp-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <input type="email" id="icpEmail" name="email" class="icp-form-input" placeholder="seuemail@exemplo.com" autocomplete="email">
+          </div>
+        </div>
+
+        <!-- Campo: Área de Interesse Principal -->
+        <div class="icp-form-group">
+          <label class="icp-form-label">
+            Procedimento ou Queixa Principal <span class="icp-required">*</span>
+          </label>
+          <div class="icp-interest-grid">
+            <label class="icp-interest-card">
+              <input type="radio" name="interesse" value="Cirurgia Facial & Cervical (Deep Plane / Pescoço)" checked>
+              <div class="icp-interest-content">
+                <span class="icp-interest-title">Cirurgia Facial & Cervical</span>
+                <span class="icp-interest-desc">Deep Plane, lifting facial e contorno do pescoço</span>
+              </div>
+            </label>
+
+            <label class="icp-interest-card">
+              <input type="radio" name="interesse" value="Blefaroplastia (Pálpebras e Olhar)">
+              <div class="icp-interest-content">
+                <span class="icp-interest-title">Blefaroplastia</span>
+                <span class="icp-interest-desc">Rejuvenescimento do olhar e correção palpebral</span>
+              </div>
+            </label>
+
+            <label class="icp-interest-card">
+              <input type="radio" name="interesse" value="Cirurgia de Cabeça e Pescoço (Tireoide, Glândulas, Nódulos)">
+              <div class="icp-interest-content">
+                <span class="icp-interest-title">Cabeça e Pescoço</span>
+                <span class="icp-interest-desc">Tireoide, parótida, glândulas salivares ou nódulos</span>
+              </div>
+            </label>
+
+            <label class="icp-interest-card">
+              <input type="radio" name="interesse" value="Consulta de Avaliação Geral e Planejamento">
+              <div class="icp-interest-content">
+                <span class="icp-interest-title">Avaliação Geral</span>
+                <span class="icp-interest-desc">Quero a análise médica da Dra. para indicar o plano ideal</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Botão de Envio para WhatsApp -->
+        <button type="submit" class="btn btn-gold icp-submit-btn" id="icpSubmitBtn">
+          <span>Avançar para o WhatsApp Oficial</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+
+        <div class="icp-modal-footer-note">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C2A26F" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Ambiente seguro. Sigilo médico garantido. Consulta presencial em Feira de Santana - BA (R$ 500).</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- Desktop JavaScript -->
   <script src="script.js"></script>
 </body>
