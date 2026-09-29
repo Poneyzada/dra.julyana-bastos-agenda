@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Olá, Dra. Julyana Bastos e equipe!',
         '',
         `Me chamo *${nomeVal}*.`,
-        'Preenchi a triagem no site para agendamento de Consulta de Avaliação (R$ 500):',
+        'Preenchi a triagem no site para agendamento de Consulta de Avaliação:',
         '',
         `• *Principal Interesse:* ${selectedInterest}`,
         `• *WhatsApp:* ${phoneInput.value.trim()}`,

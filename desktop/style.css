@@ -1240,527 +1240,130 @@ button {
 }
 
 /* ==========================================================================
-   SEÇÃO DE VALOR — CONSULTA (R$ 500)
+   FINAL CTA / AGENDAMENTO SECTION (EDITORIAL LUXURY SPLIT CARD)
    ========================================================================== */
-.pricing-section {
-  padding: 110px 0;
-  background: linear-gradient(135deg, var(--color-navy) 0%, #151C2C 100%);
+.final-cta-section {
+  padding: 100px 0 60px;
+  background: linear-gradient(135deg, #0B101D 0%, #151C2C 100%);
   color: #FFFFFF;
   position: relative;
   overflow: hidden;
 }
 
-.pricing-section::before {
+.final-cta-section::before {
   content: "";
   position: absolute;
-  top: -150px;
-  right: -100px;
-  width: 500px;
-  height: 500px;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 400px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(194, 162, 111, 0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
-.pricing-card-desktop {
-  max-width: 900px;
+.final-cta-container-box {
+  max-width: 1100px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.03);
   border: 1.5px solid var(--color-border-gold);
   border-radius: var(--radius-xl);
-  padding: 50px 60px;
+  padding: 50px 50px 0 50px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 50px;
-  align-items: center;
-  position: relative;
-}
-
-.pricing-badge-corner {
-  position: absolute;
-  top: -15px;
-  left: 50px;
-  background: linear-gradient(135deg, #D4B988 0%, #B89358 100%);
-  color: #0E1524;
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 6px 20px;
-  border-radius: var(--radius-full);
-}
-
-.pricing-left h3 {
-  font-family: var(--font-serif);
-  font-size: 2.2rem;
-  color: #FFFFFF;
-  margin-bottom: 8px;
-}
-
-.pricing-left-desc {
-  font-size: 0.95rem;
-  color: #CBD5E1;
-  margin-bottom: 24px;
-}
-
-.pricing-inclusions-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.pricing-inclusion-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 0.92rem;
-  color: #E2E8F0;
-}
-
-.pricing-inclusion-row svg {
-  color: var(--color-gold-light);
-  flex-shrink: 0;
-  margin-top: 3px;
-}
-
-/* ==========================================================================
-   LIQUID GLASS CARD — COMPONENTE 21ST.DEV ADAPTADO
-   ========================================================================== */
-.liquid-card-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.liquid-glass-card {
-  position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(14, 21, 36, 0.45);
-  backdrop-filter: blur(20px) url("#container-glass");
-  -webkit-backdrop-filter: blur(20px);
-  /* Sombras e chanfros ópticos de refração líquida */
-  box-shadow: 
-    0 0 10px rgba(0, 0, 0, 0.1),
-    0 20px 40px rgba(0, 0, 0, 0.4),
-    inset 3px 3px 1px -3.5px rgba(255, 255, 255, 0.15),
-    inset -3px -3px 1px -3.5px rgba(255, 255, 255, 0.85),
-    inset 1px 1px 1px -0.5px rgba(255, 255, 255, 0.6),
-    inset -1px -1px 1px -0.5px rgba(255, 255, 255, 0.6),
-    inset 0 0 8px 6px rgba(255, 255, 255, 0.08),
-    inset 0 0 2px 2px rgba(255, 255, 255, 0.06),
-    0 0 24px rgba(194, 162, 111, 0.22);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.liquid-glass-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(194, 162, 111, 0.45);
-  box-shadow: 
-    0 0 14px rgba(0, 0, 0, 0.15),
-    0 25px 50px rgba(0, 0, 0, 0.5),
-    inset 3px 3px 1px -3.5px rgba(255, 255, 255, 0.25),
-    inset -3px -3px 1px -3.5px rgba(255, 255, 255, 0.95),
-    inset 1px 1px 1px -0.5px rgba(255, 255, 255, 0.7),
-    inset -1px -1px 1px -0.5px rgba(255, 255, 255, 0.7),
-    inset 0 0 10px 8px rgba(194, 162, 111, 0.18),
-    0 0 35px rgba(194, 162, 111, 0.35);
-}
-
-.liquid-card-backdrop {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.liquid-card-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
-  opacity: 0.24;
-  filter: grayscale(40%) contrast(1.1);
-  transform: scale(1.05);
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-.liquid-glass-card:hover .liquid-card-bg-img {
-  transform: scale(1.1);
-  opacity: 0.32;
-}
-
-.liquid-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(14, 21, 36, 0.5) 0%, rgba(14, 21, 36, 0.92) 75%, #0E1524 100%);
-}
-
-.liquid-card-content {
-  position: relative;
-  z-index: 2;
-  padding: 30px 28px 36px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* Espaço acima do card onde o badge de atendimento exclusivo fica com destaque */
-.liquid-top-badge-wrap {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 5;
-}
-
-.liquid-card-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(14, 21, 36, 0.92);
-  border: 1px solid rgba(194, 162, 111, 0.45);
-  padding: 8px 20px;
-  border-radius: var(--radius-full);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-gold-light);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* Área livre para o rosto da Dra. Julyana brilhar desobstruído dentro do vidro */
-.liquid-face-clearance {
-  height: 65px;
-  pointer-events: none;
-}
-
-.liquid-badge-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-gold);
-  box-shadow: 0 0 8px var(--color-gold);
-}
-
-.liquid-card-header {
-  margin-bottom: 24px;
-}
-
-.liquid-card-subtitle {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #A2B0C6;
-  font-weight: 700;
-  display: block;
-}
-
-.liquid-pricing-wrap {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 6px;
-  margin: 10px 0 6px;
-}
-
-.liquid-pricing-curr {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--color-gold-light);
-}
-
-.liquid-pricing-number {
-  font-family: var(--font-serif);
-  font-size: 4.8rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  line-height: 1;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.liquid-pricing-caption {
-  font-size: 0.82rem;
-  color: #CBD5E1;
-}
-
-.liquid-card-cta-box {
-  width: 100%;
-  margin-bottom: 18px;
-}
-
-.liquid-btn {
-  width: 100%;
-  padding: 16px 24px;
-  font-size: 0.95rem;
-  box-shadow: 0 8px 25px rgba(194, 162, 111, 0.4);
-}
-
-.liquid-card-footnote {
-  font-size: 0.74rem;
-  color: #94A3B8;
-  line-height: 1.45;
-}
-
-/* ==========================================================================
-   FAQ SECTION — DÚVIDAS FREQUENTES
-   ========================================================================== */
-.faq-section {
-  padding: 110px 0;
-  background: var(--color-bg);
-}
-
-.faq-header {
-  text-align: center;
-  max-width: 650px;
-  margin: 0 auto 50px;
-}
-
-.faq-grid-desktop {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.faq-item-desktop {
-  background: #FFFFFF;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.25s ease;
-}
-
-.faq-item-desktop.active {
-  border-color: var(--color-gold);
-  box-shadow: var(--shadow-md);
-}
-
-.faq-q-btn {
-  padding: 22px 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  cursor: pointer;
-}
-
-.faq-q-title {
-  font-size: 1.08rem;
-  font-weight: 700;
-  color: var(--color-navy);
-  text-align: left;
-}
-
-.faq-arrow-icon {
-  width: 22px;
-  height: 22px;
-  color: var(--color-gold-dark);
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-}
-
-.faq-item-desktop.active .faq-arrow-icon {
-  transform: rotate(180deg);
-}
-
-.faq-a-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease;
-  padding: 0 28px;
-}
-
-.faq-item-desktop.active .faq-a-body {
-  max-height: 300px;
-  padding-bottom: 24px;
-}
-
-.faq-a-text {
-  font-size: 0.94rem;
-  color: var(--color-text-muted);
-  line-height: 1.65;
-  border-top: 1px solid var(--color-surface-soft);
-  padding-top: 16px;
-}
-
-/* ==========================================================================
-   LOCALIZAÇÃO E ATENDIMENTO — FULL BLEED COM DRA. NO FUNDO E PROFUNDIDADE
-   ========================================================================== */
-.location-section {
-  position: relative;
-  background: radial-gradient(circle at 75% 50%, #162238 0%, #0A0F1A 75%);
-  color: #FFFFFF;
-  padding: 120px 0;
-  overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  min-height: 680px;
-  display: flex;
-  align-items: center;
-}
-
-.location-bg-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #0A0F1A 0%, rgba(10, 15, 26, 0.95) 48%, rgba(10, 15, 26, 0.6) 68%, transparent 100%);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.location-doctor-backdrop {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 55%;
-  z-index: 1;
-  display: flex;
+  grid-template-columns: 1.25fr 0.85fr;
+  gap: 40px;
   align-items: flex-end;
-  justify-content: flex-end;
-  pointer-events: none;
-}
-
-.location-doctor-backdrop img {
-  height: 98%;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: bottom right;
-  filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.8));
-}
-
-.location-inner {
   position: relative;
-  z-index: 3;
-  width: 100%;
+  overflow: hidden;
 }
 
-.location-content {
-  max-width: 620px;
-}
-
-.location-desc {
-  font-size: 1.05rem;
-  color: #CBD5E1;
-  margin-top: 14px;
-  line-height: 1.65;
-}
-
-.loc-cities-pills-desktop {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 24px 0 28px;
-}
-
-.loc-pill {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 8px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.84rem;
-  font-weight: 600;
-  color: #E2E8F0;
-  backdrop-filter: blur(10px);
-}
-
-.loc-pill.main-city {
-  background: linear-gradient(135deg, #D4B988 0%, #B89358 100%);
-  color: #0E1524;
-  font-weight: 800;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.loc-pill.regional {
-  background: rgba(194, 162, 111, 0.15);
-  color: var(--color-gold-light);
-  border-color: rgba(194, 162, 111, 0.3);
-}
-
-.location-perks {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 24px;
-}
-
-.loc-perk-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-.loc-perk-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(194, 162, 111, 0.15);
-  color: var(--color-gold-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.loc-perk-item h4 {
-  font-size: 0.95rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-
-.loc-perk-item p {
-  font-size: 0.85rem;
-  color: #94A3B8;
-  line-height: 1.45;
-}
-
-/* ==========================================================================
-   FINAL CTA SECTION
-   ========================================================================== */
-.final-cta-section {
-  padding: 100px 0;
-  background: linear-gradient(135deg, #101625 0%, #1A2337 100%);
-  color: #FFFFFF;
-  text-align: center;
-}
-
-.final-cta-container-box {
-  max-width: 820px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--color-border-gold);
-  border-radius: var(--radius-xl);
-  padding: 60px 50px;
-  backdrop-filter: blur(14px);
+.final-cta-content {
+  text-align: left;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 2;
 }
 
 .final-cta-title {
   font-family: var(--font-serif);
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #FFFFFF;
-  line-height: 1.15;
+  line-height: 1.2;
   margin: 16px 0;
+  letter-spacing: -0.01em;
 }
 
 .final-cta-subtitle {
-  font-size: 1.1rem;
-  color: #A2B0C6;
-  line-height: 1.6;
-  max-width: 650px;
-  margin: 0 auto 36px;
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
+
+.final-cta-btn-wrap {
+  margin-bottom: 24px;
+}
+
+.final-cta-main-btn {
+  padding: 16px 36px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(194, 162, 111, 0.35);
+}
+
+.final-cta-doctor-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(194, 162, 111, 0.3);
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  margin-bottom: 18px;
+}
+
+.final-doc-name {
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+}
+
+.final-doc-sep {
+  color: var(--color-gold);
+}
+
+.final-doc-crm {
+  color: var(--color-gold-light);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.final-cta-legal {
+  font-size: 0.82rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.final-cta-visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.final-cta-doctor-img {
+  max-height: 480px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
 }
 
 /* ==========================================================================

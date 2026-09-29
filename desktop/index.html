@@ -4,8 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dra. Julyana Bastos — Cirurgia de Cabeça e Pescoço & Cirurgia Facial | Feira de Santana (BA)</title>
-  <meta name="description" content="Rejuvenescimento facial e cervical com segurança de quem domina a anatomia da cabeça e do pescoço. Consulta de avaliação por R$ 500 com Dra. Julyana Bastos.">
+  <meta name="description" content="Rejuvenescimento facial e cervical com a segurança de quem domina a anatomia da cabeça e do pescoço. Consulta de avaliação individualizada com a Dra. Julyana Bastos.">
   
+  <!-- Redirecionamento Automático: Dispositivos móveis sempre abrem a versão Mobile dedicada -->
+  <script>
+    (function() {
+      var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth < 992 && window.innerWidth > 0);
+      var urlParams = new URLSearchParams(window.location.search);
+      if (isMobile && urlParams.get('view') !== 'desktop') {
+        window.location.replace('../mobile/index.html' + window.location.search);
+      }
+    })();
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/webp" href="../assets/images/logo-jb-gold.webp">
 
@@ -25,7 +36,7 @@
       <div class="top-bar-right">
         <span>Feira de Santana — Bahia</span>
         <span>•</span>
-        <a href="#contato">Atendimento Regional & Exterior</a>
+        <a href="#agendamento">Atendimento Presencial com Hora Marcada</a>
       </div>
     </div>
   </div>
@@ -49,13 +60,13 @@
           <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
           <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
           <li><a href="#procedimentos" class="nav-link">Procedimentos</a></li>
+          <li><a href="#agendamento" class="nav-link">Agendamento</a></li>
           <li><a href="#faq" class="nav-link">Dúvidas Frequentes</a></li>
-          <li><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
       </nav>
 
       <!-- CTA no canto -->
-      <a href="#valor" class="btn btn-gold header-cta-btn" data-whatsapp>
+      <a href="#agendamento" class="btn btn-gold header-cta-btn" data-whatsapp>
         Agendar Avaliação
       </a>
     </div>
@@ -91,8 +102,8 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#valor" class="btn btn-gold hero-cta-btn" data-whatsapp>
-              Agendar minha avaliação — R$ 500
+            <a href="#agendamento" class="btn btn-gold hero-cta-btn" data-whatsapp>
+              Agendar Consulta de Avaliação
             </a>
             <p class="hero-compliance-note">
               Atendimento personalizado. Indicação de procedimento cirúrgico sujeita à avaliação médica presencial individual.
@@ -386,8 +397,8 @@
             </div>
           </div>
 
-          <a href="#valor" class="btn btn-gold" style="width: fit-content; padding: 16px 36px;" data-whatsapp>
-            Quero agendar minha avaliação
+          <a href="#agendamento" class="btn btn-gold" style="width: fit-content; padding: 16px 36px;" data-whatsapp>
+            Agendar Consulta de Avaliação
           </a>
         </div>
       </div>
@@ -411,7 +422,7 @@
           <div class="step-num-bubble">1</div>
           <span class="step-card-tag">Passo 01</span>
           <h3>Agendamento</h3>
-          <p>Você agenda sua consulta de avaliação facial (valor: R$ 500) diretamente com a equipe de atendimento via WhatsApp no dia e horário mais conveniente.</p>
+          <p>Você agenda sua consulta de avaliação facial diretamente com a equipe de atendimento via WhatsApp, reservando seu horário exclusivo com a cirurgiã.</p>
         </div>
 
         <!-- Passo 2 -->
@@ -435,13 +446,13 @@
           <div class="step-num-bubble">4</div>
           <span class="step-card-tag">Passo 04</span>
           <h3>Planejamento personalizado</h3>
-          <p>Caso haja indicação cirúrgica, é elaborado um plano cirúrgico específico, com orçamento detalhado por procedimento, hospital de escolha e complexidade.</p>
+          <p>Caso haja indicação cirúrgica, é elaborado um plano cirúrgico específico, com esclarecimento transparente sobre cada etapa e complexidade.</p>
         </div>
       </div>
 
       <div class="steps-cta-center">
-        <a href="#valor" class="btn btn-navy" style="padding: 16px 36px;" data-whatsapp>
-          Quero agendar minha avaliação — R$ 500
+        <a href="#agendamento" class="btn btn-navy" style="padding: 16px 36px;" data-whatsapp>
+          Agendar Consulta de Avaliação
         </a>
       </div>
     </div>
@@ -556,111 +567,45 @@
             <strong>Nota médica:</strong> A indicação de cada procedimento é feita exclusivamente após avaliação médica presencial individualizada.
           </p>
         </div>
-        <a href="#valor" class="btn btn-gold" style="padding: 12px 28px; white-space: nowrap;" data-whatsapp>
-          Agendar avaliação para saber o que é indicado
+        <a href="#agendamento" class="btn btn-gold" style="padding: 12px 28px; white-space: nowrap;" data-whatsapp>
+          Agendar Consulta de Avaliação
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 8. SEÇÃO DE VALOR — CONSULTA (R$ 500) -->
-  <section class="pricing-section" id="valor">
+  <!-- 8. INICIE SEU PLANEJAMENTO (DOBRA DE AGENDAMENTO EXCLUSIVO COM A DRA. JULYANA) -->
+  <section class="final-cta-section" id="agendamento">
     <div class="container">
-      <div class="pricing-card-desktop">
-        <span class="pricing-badge-corner">Consulta Individualizada</span>
-
-        <!-- Lado Esquerdo: Inclusões da Consulta -->
-        <div class="pricing-left">
-          <span class="section-label" style="color: var(--color-gold-light);">Investimento Inicial</span>
-          <h3>Consulta de Avaliação Facial</h3>
-          <p class="pricing-left-desc">
-            Avaliação individualizada + planejamento cirúrgico personalizado (quando indicado), conduzida pela Dra. Julyana Bastos.
+      <div class="final-cta-container-box">
+        <div class="final-cta-content">
+          <span class="badge-pill badge-gold" style="margin-bottom: 16px;">Inicie seu planejamento</span>
+          <h2 class="final-cta-title">O primeiro passo é entender o que é indicado para você</h2>
+          <p class="final-cta-subtitle">
+            Agende sua consulta de avaliação presencial para um diagnóstico anatômico minucioso, com clareza sobre cada etapa, técnica e planejamento cirúrgico sob medida.
           </p>
-
-          <ul class="pricing-inclusions-list">
-            <li class="pricing-inclusion-row">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Análise detalhada da anatomia facial e cervical e dinâmica tecidual</span>
-            </li>
-            <li class="pricing-inclusion-row">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Esclarecimento técnico transparente sobre os procedimentos possíveis</span>
-            </li>
-            <li class="pricing-inclusion-row">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Espaço acolhedor e dedicado para tirar todas as suas dúvidas com calma</span>
-            </li>
-            <li class="pricing-inclusion-row">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Orçamento cirúrgico detalhado por procedimento, hospital e anestesia</span>
-            </li>
-          </ul>
+          <div class="final-cta-btn-wrap">
+            <a href="#agendamento" class="btn btn-gold final-cta-main-btn" data-whatsapp>
+              Agendar Consulta de Avaliação
+            </a>
+          </div>
+          <div class="final-cta-doctor-chip">
+            <span class="final-doc-name">Dra. Julyana Bastos</span>
+            <span class="final-doc-sep">•</span>
+            <span class="final-doc-crm">CRM-BA 32376 | RQE 23272</span>
+          </div>
+          <p class="final-cta-legal">
+            Atendimento médico presencial e confidencial em consultório estruturado em Feira de Santana (BA). Indicação cirúrgica sujeita a exame clínico individual.
+          </p>
         </div>
-
-        <!-- Lado Direito: Liquid Glass Card (Inspirado no component 21st.dev) -->
-        <div class="liquid-card-wrapper">
-          <!-- Badge de Atendimento Exclusivo posicionado no espaço acima do card (sai do rosto da Dra.) -->
-          <div class="liquid-top-badge-wrap">
-            <div class="liquid-card-badge">
-              <span class="liquid-badge-dot"></span>
-              Atendimento Presencial Exclusivo
-            </div>
-          </div>
-
-          <div class="liquid-glass-card">
-            <!-- Camada de imagem e profundidade no fundo do vidro -->
-            <div class="liquid-card-backdrop">
-              <img src="../assets/images/dra-perfil.webp" alt="Dra. Julyana Bastos" class="liquid-card-bg-img">
-              <div class="liquid-card-overlay"></div>
-            </div>
-
-            <!-- Conteúdo Refinado do Vidro Líquido com rosto livre -->
-            <div class="liquid-card-content">
-              <div class="liquid-face-clearance" aria-hidden="true"></div>
-
-              <div class="liquid-card-header">
-                <span class="liquid-card-subtitle">Valor da Consulta</span>
-                
-                <div class="liquid-pricing-wrap">
-                  <span class="liquid-pricing-curr">R$</span>
-                  <span class="liquid-pricing-number">500</span>
-                </div>
-
-                <p class="liquid-pricing-caption">
-                  Reserva de horário exclusivo com a cirurgiã
-                </p>
-              </div>
-
-              <div class="liquid-card-cta-box">
-                <a href="#valor" class="btn btn-gold liquid-btn" data-whatsapp>
-                  Agendar minha consulta
-                </a>
-              </div>
-
-              <p class="liquid-card-footnote">
-                O orçamento cirúrgico é individualizado, considerando procedimentos associados, hospital, equipe anestésica e complexidade de cada caso.
-              </p>
-            </div>
-          </div>
+        <div class="final-cta-visual">
+          <img src="../assets/images/dra-editorial-cutout.webp" alt="Dra. Julyana Bastos — Cirurgia de Cabeça e Pescoço e Cirurgia Facial" class="final-cta-doctor-img">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SVG Filter Defs para o Liquid Glass Effect -->
-  <svg class="liquid-glass-svg-defs" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;">
-    <defs>
-      <filter id="container-glass" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-        <feTurbulence type="fractalNoise" baseFrequency="0.02 0.02" numOctaves="1" seed="1" result="turbulence" />
-        <feGaussianBlur in="turbulence" stdDeviation="2" result="blurredNoise" />
-        <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="90" xChannelSelector="R" yChannelSelector="B" result="displaced" />
-        <feGaussianBlur in="displaced" stdDeviation="3" result="finalBlur" />
-        <feComposite in="finalBlur" in2="finalBlur" operator="over" />
-      </filter>
-    </defs>
-  </svg>
-
-  <!-- 9. FAQ — PERGUNTAS FREQUENTES -->
+  <!-- 9. FAQ — PERGUNTAS FREQUENTES (POSICIONADO APÓS O AGENDAMENTO E ANTES DO RODAPÉ) -->
   <section class="faq-section" id="faq">
     <div class="container">
       <div class="faq-header">
@@ -745,7 +690,7 @@
           </button>
           <div class="faq-a-body">
             <p class="faq-a-text">
-              A consulta de avaliação facial divulgada é exclusivamente particular (R$ 500). Para consultas e patologias da Cirurgia de Cabeça e Pescoço (como tireoide e glândulas salivares), alguns convênios são aceitos conforme a clínica conveniada.
+              A consulta de avaliação facial para planejamento cirúrgico é realizada de forma particular e individualizada. Para consultas e patologias relacionadas à Cirurgia de Cabeça e Pescoço (como tireoide, parótida e glândulas salivares), consulte nossa equipe para orientações sobre coberturas e clínicas conveniadas.
             </p>
           </div>
         </div>
@@ -753,82 +698,7 @@
     </div>
   </section>
 
-  <!-- 10. LOCALIZAÇÃO E ATENDIMENTO -->
-  <section class="location-section" id="contato">
-    <div class="location-bg-overlay"></div>
-    <div class="location-doctor-backdrop">
-      <img src="../assets/images/dra-editorial-cutout.webp" alt="Dra. Julyana Bastos — Atendimento em Feira de Santana">
-    </div>
-    <div class="container location-inner">
-      <div class="location-content">
-        <span class="section-label" style="color: var(--color-gold-light);">Feira de Santana — Bahia</span>
-        <h2 class="section-title" style="color: #FFFFFF;">Atendimento em Feira de Santana, com pacientes de toda a Bahia e do Brasil</h2>
-        <p class="location-desc">
-          Recebo pacientes de <strong>Feira de Santana e região</strong>, além de Petrolina, Luís Eduardo Magalhães, Salvador, Vitória da Conquista, Irecê, Serrinha, Coité e outras cidades — inclusive pacientes de fora do estado e do exterior.
-        </p>
-
-        <div class="loc-cities-pills-desktop">
-          <span class="loc-pill main-city">Feira de Santana (Base)</span>
-          <span class="loc-pill regional">Salvador</span>
-          <span class="loc-pill">Petrolina</span>
-          <span class="loc-pill">Luís Eduardo Magalhães</span>
-          <span class="loc-pill">Vitória da Conquista</span>
-          <span class="loc-pill">Irecê</span>
-          <span class="loc-pill">Serrinha</span>
-          <span class="loc-pill">Conceição do Coité</span>
-          <span class="loc-pill regional">Outros Estados & Exterior</span>
-        </div>
-
-        <div class="location-perks">
-          <div class="loc-perk-item">
-            <div class="loc-perk-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            </div>
-            <div>
-              <h4>Consultório Estruturado & Acolhedor</h4>
-              <p>Ambiente com máxima privacidade, conforto e logística facilitada para pacientes que vêm de outras regiões.</p>
-            </div>
-          </div>
-          <div class="loc-perk-item">
-            <div class="loc-perk-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-            </div>
-            <div>
-              <h4>Atendimento com Horário Exclusivo</h4>
-              <p>Tempo de consulta dedicado para analisar cada vetor e estrutura sem pressa.</p>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top: 32px;">
-          <a href="#valor" class="btn btn-gold" data-whatsapp style="padding: 16px 36px; font-size: 1rem;">
-            Agendar minha avaliação — R$ 500
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11. CTA FINAL -->
-  <section class="final-cta-section">
-    <div class="container">
-      <div class="final-cta-container-box">
-        <span class="badge-pill badge-gold" style="margin-bottom: 16px;">Inicie seu planejamento</span>
-        <h2 class="final-cta-title">O primeiro passo é entender o que é indicado para você</h2>
-        <p class="final-cta-subtitle">
-          Agende sua consulta de avaliação facial e tenha um planejamento individualizado, com clareza sobre cada etapa, técnica e orçamento.
-        </p>
-        <a href="#valor" class="btn btn-gold" style="padding: 18px 44px; font-size: 1.1rem;" data-whatsapp>
-          Agendar minha avaliação — R$ 500
-        </a>
-        <p style="font-size: 0.78rem; color: #94A3B8; margin-top: 20px; line-height: 1.5; max-width: 600px; margin-left: auto; margin-right: auto;">
-          Atendimento médico individualizado. Este espaço tem caráter informativo e não promete resultados — a indicação cirúrgica é definida exclusivamente após avaliação presencial.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 12. FOOTER -->
+  <!-- 10. FOOTER (A ÚLTIMA DOBRA) -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top-grid">
@@ -849,7 +719,8 @@
             <li><a href="#diferenciais">Diferencial da Anatomia</a></li>
             <li><a href="#como-funciona">Jornada da Avaliação</a></li>
             <li><a href="#procedimentos">Procedimentos Faciais</a></li>
-            <li><a href="#valor">Valor da Consulta</a></li>
+            <li><a href="#agendamento">Agendar Consulta</a></li>
+            <li><a href="#faq">Dúvidas Frequentes</a></li>
           </ul>
         </div>
 
@@ -857,7 +728,7 @@
           <h4>Atendimento</h4>
           <ul class="footer-links-list">
             <li><span>Feira de Santana — Bahia</span></li>
-            <li><a href="#valor" data-whatsapp>Agendamento via WhatsApp</a></li>
+            <li><a href="#agendamento" data-whatsapp>Agendamento via WhatsApp</a></li>
             <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram: @drajulyanabastos</a></li>
             <li><span>Atendimento com hora marcada</span></li>
           </ul>
@@ -986,7 +857,7 @@
 
         <div class="icp-modal-footer-note">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C2A26F" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-          <span>Ambiente seguro. Sigilo médico garantido. Consulta presencial em Feira de Santana - BA (R$ 500).</span>
+          <span>Ambiente seguro. Sigilo médico garantido. Atendimento presencial em Feira de Santana - BA.</span>
         </div>
       </form>
     </div>
